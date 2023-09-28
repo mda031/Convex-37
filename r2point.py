@@ -115,8 +115,6 @@ class R2Point:
         if len2 == 0:
             if len1 == 2:
                 return R2Point.dist(arr1[0], arr1[1])
-            elif len1 == 0:
-                return 0
             else:
                 return 0
         elif len2 == 1:
