@@ -104,3 +104,19 @@ class TestR2Point:
     def test_len_of_segment_3(self):
         a, b = R2Point(0.0, -2.0), R2Point(-1.0, 3.0)
         assert R2Point.len_of_segment(a, b) == approx(0.0)
+
+    def test_len_of_segment_4(self):
+        a, b = R2Point(0.0, 1.0), R2Point(0.0, -2.0)
+        assert R2Point.len_of_segment(a, b) == approx(1.0)
+
+    def test_len_of_segment_5(self):
+        a, b = R2Point(5.0, 0.0), R2Point(-3.0, 0.0)
+        assert R2Point.len_of_segment(a, b) == approx(5.0)
+
+    def test_len_of_segment_6(self):
+        a, b = R2Point(-1.0, 3.0), R2Point(3.0, -1.0)
+        assert R2Point.len_of_segment(a, b) == approx(sqrt(8.0))
+
+    def test_len_of_segment_7(self):
+        a, b = R2Point(-2.0, -2.0), R2Point(0.0, 0.0)
+        assert R2Point.len_of_segment(a, b) == approx(0.0)
